@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
 
-# Menggunakan port bawaan 9router (20128) atau dari env Railway jika dinamis
-PORT_TARGET="${PORT:-20128}"
+# Menyediakan port fallback 20128 jika variabel $PORT dari Railway kosong
+export PORT="${PORT:-20128}"
 
-echo "Menjalankan 9router pada port: $PORT_TARGET"
+echo "Memulai 9router pada port: $PORT"
 
-# Jalankan 9router dengan menentukan port-nya
-9router --port "$PORT_TARGET"
+# Menjalankan perintah global 9router
+9router
