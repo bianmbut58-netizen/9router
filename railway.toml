@@ -1,5 +1,5 @@
 [build]
-buildCommand = "npm install -g 9router"
+buildCommand = "apt-get update -qq && apt-get install -y -qq nodejs npm && npm install -g 9router"
 
 [deploy]
 startCommand = "bash start.sh"
