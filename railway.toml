@@ -1,5 +1,7 @@
 [build]
-buildCommand = "apt-get update -qq && apt-get install -y -qq nodejs npm && npm install 9router"
+buildCommand = "apt-get update -qq && apt-get install -y -qq curl git unzip && git clone https://github.com/decolua/9router.git /app/9router && cd /app/9router && cp .env.example .env && npm install && npm run build"
 
 [deploy]
-startCommand = "9router"
+startCommand = "bash start.sh"
+healthcheckPath = "/dashboard"
+healthcheckTimeout = 30
