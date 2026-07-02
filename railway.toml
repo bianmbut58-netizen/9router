@@ -3,5 +3,3 @@ buildCommand = "apt-get update -qq && apt-get install -y -qq nodejs npm && npm i
 
 [deploy]
 startCommand = "bash start.sh"
-healthcheckPath = "/"
-healthcheckTimeout = 30
