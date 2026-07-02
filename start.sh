@@ -1,4 +1,3 @@
-#!/bin/bash
-set -e
+set -e 
 
-exec 9router --no-browser --skip-update
+exec npx --yes 9router --no-browser --skip-update   
