@@ -1,0 +1,7 @@
+[build]
+buildCommand = "npm install -g 9router"
+
+[deploy]
+startCommand = "bash start.sh"
+healthcheckPath = "/"
+healthcheckTimeout = 30
